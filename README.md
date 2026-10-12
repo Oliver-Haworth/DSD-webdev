@@ -7,7 +7,8 @@ ToDo
 - [x] make a basic menu page
 - [x] make basic homepage
 - [x] make basic login page
-- [ ] make login database and system
+- [x] make login database and system
+- [ ] make login system persistant and cross-page
 - [ ] make site closer to figma
 
 - [ ] connect menu to a database
