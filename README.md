@@ -9,6 +9,9 @@
 - [x] make basic login page
 - [x] make login database and system
 - [ ] make login system persistant and cross-page
-- [ ] make site closer to figma
+- [ ] add sighn up
+- [ ] make site closer in style to figma
 
 - [ ] connect menu to a database
+
+## do not try to modularise i know its annoying you do not have time <br> save it for the next project

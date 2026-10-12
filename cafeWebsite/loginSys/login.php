@@ -11,14 +11,14 @@
 </head>
 <body>
     <nav class="navBar">
-        <a href="/index.php" class="logo">
+        <a href="../index.php" class="logo">
             Kettle Row <span class="coffee">Coffee</span>
         </a>
 
         <div class="right">
-            <a href="./menu.php">Menu</a>
-            <a href="./about.php">About</a>
-            <a href="./contact.php">Contact</a>
+            <a href="../menu.php">Menu</a>
+            <a href="../about.php">About</a>
+            <a href="../contact.php">Contact</a>
         </div>
     </nav>
 
