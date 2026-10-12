@@ -39,7 +39,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <section class="hero" id="about">
 
             <div class="hero-content">
-                <p class="eyebrow">BUY NOW OR ILL CHOP YOUR LIMBS OFF</p>
+                <p class="eyebrow">BUY NOW TO GET IT FRESH</p>
                 <h1>
                     Good coffee,<br>
                     made by <span class="highlight">people</span><br>

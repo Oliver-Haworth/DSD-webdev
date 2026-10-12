@@ -1,4 +1,4 @@
-# ToDo
+# cafeWebsite
 
 ## project is already *fucked* don't make it more than simple
 
@@ -9,10 +9,17 @@
 - [x] make basic login page
 - [x] make login database and system
 - [X] make login system persistant and cross-page
-- [ ] add sighn up
-- [ ] make site closer in style to figma
+- [x] add sighn up
+- [ ] make site closer in style to figma - desighn is similar but seprated into multiple pages
+
+## things i would have done if had more time/what i didn't get round to and plan to implement on the next project
 
 - [ ] connect menu to a database
-- [ ] forgot password
-
-## do not try to modularise i know its annoying you do not have time <br> save it for the next project
+- [ ] forgot password button
+- [ ] basket/shopping cart
+- [ ] orderable menu (add items to cart)
+- [ ] password hashing
+- [ ] a non ai desighn :|
+- [ ] better file management
+- [ ] modularisation for html and css (re-useable modules such as footer)
+- [ ] not have to re-write from scratch so many times

@@ -35,7 +35,7 @@ body {
 }
 
 main {
-    /* min-height: calc(100vh - 140px); */
+    min-height: calc(100vh - 140px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +187,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 1rem;
 }
 
 .menu-board {
