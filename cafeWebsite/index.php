@@ -12,7 +12,7 @@
 <body>
 
     <nav class="navBar">
-        <a href="#" class="logo">
+        <a href="./index.php" class="logo">
             Kettle Row <span class="coffee">Coffee</span>
         </a>
 
