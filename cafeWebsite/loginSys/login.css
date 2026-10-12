@@ -1,0 +1,168 @@
+/* ===== Colours & reset ===== */
+:root {
+    --bg: #151a35;
+    --text: #fbf8f4;
+    --muted: #b9bdcd;
+    --orange: #ff823c;
+    --line: rgba(251, 248, 244, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    /* min-height: calc(100vh - 140px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 6%;
+}
+
+/* ===== Navigation ===== */
+.navBar {
+    width: min(1200px, 88%);
+    min-height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.coffee {
+    color: var(--orange);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.right a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.right a:hover,
+.right a:focus-visible {
+    color: var(--orange);
+}
+
+/* ===== Hero section ===== */
+.hero {
+    width: min(1200px, 88%);
+    min-height: 590px;
+    margin: 0 auto;
+    padding: 95px 0 85px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.eyebrow {
+    margin-bottom: 22px;
+    color: var(--orange);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 720px;
+    font-size: clamp(46px, 7vw, 82px);
+    line-height: 0.99;
+    letter-spacing: -5px;
+    font-weight: 800;
+}
+
+.highlight {
+    display: inline-block;
+    padding: 0 7px 3px;
+    background: var(--orange);
+    color: var(--text);
+    letter-spacing: -4px;
+}
+
+.description {
+    max-width: 490px;
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ===== Hero links ===== */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 28px;
+}
+
+.menuButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--orange);
+    padding-bottom: 8px;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.menuButton:hover {
+    color: var(--orange);
+    gap: 18px;
+}
+
+.about {
+    max-width: 90%;
+    text-align: center;
+}
+
+.about button {
+    background-color: #2b4bee;
+}
+/* ===== Footer ===== */
+footer {
+    width: 88%;
+    margin: 0 auto;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+}
