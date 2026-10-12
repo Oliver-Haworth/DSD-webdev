@@ -7,7 +7,7 @@
     <title>café </title>
     <meta name="description" content="An independent neighbourhood cafe serving freshly roasted coffee and daily bakes.">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <nav class="navBar">

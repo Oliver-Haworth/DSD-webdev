@@ -25,6 +25,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+main {
+    /* min-height: calc(100vh - 140px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 6%;
+}
+
 /* ===== Navigation ===== */
 .navBar {
     width: min(1200px, 88%);
@@ -142,9 +150,9 @@ body {
 }
 
 .about {
-    max-width: 490px;
+    max-width: 90%;
+    text-align: center;
 }
-
 /* ===== Footer ===== */
 footer {
     width: 88%;

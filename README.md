@@ -2,7 +2,7 @@ ToDo
 
 ## project is already *fucked* don't make it more than simple
 
-- [ ] make basic about page
+- [x] make basic about page
 - [ ] make basic contact page
 - [ ] make a basic menu page
 - [ ] make basic homepage
