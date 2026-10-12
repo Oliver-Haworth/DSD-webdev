@@ -1,24 +1,78 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// If already logged in, skip the login page and go straight to about.php
+if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
+    header("Location: about.php");
+    exit();
+}
+
+$error_message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $host = 'localhost';
+    $user = 'root';
+    $pass = ''; 
+    $dbname = 'cafewebsite';
+
+    $conn = mysqli_connect($host, $user, $pass, $dbname);
+
+    if (!$conn) {
+        die('Connect failed: ' . mysqli_connect_error());
+    }
+
+    $input_user = trim($_POST['username']);
+    $input_pass = $_POST['password'];
+
+    $stmt = $conn->prepare("SELECT id, username, password FROM login WHERE username = ?");
+    $stmt->bind_param("s", $input_user);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        
+        // Recommended: Use password_verify() if passwords are hashed. 
+        // Using plain text comparison ($input_pass === $row['password']) only if stored as plain text:
+        if ($input_pass === $row['password']) {
+            session_regenerate_id(true);
+
+            $_SESSION["logged_in"] = true;
+            $_SESSION["user_id"] = $row['id'];
+            $_SESSION["username"] = $row['username'];
+
+            header("Location: about.php");
+            exit();
+        } else {
+            $error_message = "Invalid username or password. Please try again.";
+        }
+    } else {
+        $error_message = "Invalid username or password. Please try again.";
+    }
+
+    $stmt->close();
+    mysqli_close($conn);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>café </title>
-    <meta name="description" content="An independent neighbourhood cafe serving freshly roasted coffee and daily bakes.">
-
+    <title>Café - Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <nav class="navBar">
-        <a href="../index.php" class="logo">
+        <a href="./index.php" class="logo">
             Kettle Row <span class="coffee">Coffee</span>
         </a>
-
         <div class="right">
-            <a href="../menu.php">Menu</a>
-            <a href="../about.php">About</a>
-            <a href="../contact.php">Contact</a>
+            <a href="./menu.php">Menu</a>
+            <a href="./about.php">About</a>
+            <a href="./contact.php">Contact</a>
         </div>
     </nav>
 
@@ -26,8 +80,11 @@
         <div class="about">
             <h1>Login</h1>
 
+            <?php if (!empty($error_message)): ?>
+                <p style="color: red;"><?php echo htmlspecialchars($error_message); ?></p>
+            <?php endif; ?>
+
             <div class="formWrapper">
-                <!-- Combined into a single form -->
                 <form method="post" action="login.php">
                     <div>
                         <label for="name1">Username:</label>
@@ -36,7 +93,6 @@
 
                     <div>
                         <label for="name2">Password:</label>
-                        <!-- Changed type to "password" to hide input characters -->
                         <input type="password" id="name2" name="password" required>
                     </div>
 
@@ -51,46 +107,5 @@
     <footer id="contact">
         <p>© Kettle Row Coffee — Made for the neighbourhood.</p>
     </footer>
-
 </body>
 </html>
-
-<?php
-// Start a session to track logged-in users
-session_start();
-
-// Database credentials
-$host = 'localhost';
-$user = 'root';
-$pass = ''; // Defined the missing password variable
-$dbname = 'cafewebsite';
-
-// Connect to the database
-$conn = mysqli_connect($host, $user, $pass, $dbname);
-
-if (!$conn) {
-    die('Connect failed: ' . mysqli_connect_error());
-}
-
-// Check if the login form was submitted via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get inputs from the form
-    $input_user = $_POST['username'];
-    $input_pass = $_POST['password'];
-
-    // Query to find the user in the 'login' table
-    $sql = "SELECT * FROM login WHERE username = '$input_user' AND password = '$input_pass'";
-    $result = $conn->query($sql);
-
-    // If a matching row is found, log them in
-    if ($result->num_rows == 1) {
-        $_SESSION['username'] = $input_user;
-        echo "Login successful! Welcome back, " . htmlspecialchars($input_user);
-        // You can redirect them to another page using: header("Location: dashboard.php");
-    } else {
-        echo "Invalid username or password. Please try again.";
-    }
-}
-
-mysqli_close($conn);
-?>
