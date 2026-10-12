@@ -25,7 +25,7 @@
     <main>
         <div class=about>
             <h1>contact us</h1>
-            <p>gofuckyourself@gmail.com</p>
+            <a href="https://gofuckyourself@gmail.com">gofuckyourself@gmail.com</a>
         </div>
     </main>
 
