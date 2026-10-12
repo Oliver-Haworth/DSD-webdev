@@ -13,5 +13,6 @@
 - [ ] make site closer in style to figma
 
 - [ ] connect menu to a database
+- [ ] forgot password
 
 ## do not try to modularise i know its annoying you do not have time <br> save it for the next project
