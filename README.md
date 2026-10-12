@@ -4,8 +4,10 @@ ToDo
 
 - [x] make basic about page
 - [x] make basic contact page
-- [ ] make a basic menu page
-- [ ] make basic homepage
+- [x] make a basic menu page
+- [x] make basic homepage
 - [ ] make basic login page
 - [ ] make login database and system
-- [ ] make menu closer to figma
+- [ ] make site closer to figma
+
+- [ ] connect menu to a database
