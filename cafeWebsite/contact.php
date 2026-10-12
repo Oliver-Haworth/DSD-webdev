@@ -29,6 +29,13 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true) {
             <a href="./menu.php">Menu</a>
             <a href="./about.php">About</a>
             <a href="./contact.php">Contact</a>
+
+            <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true): ?>
+                <span style="color: #666; font-size: 0.9rem; margin-right: 5px;">Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?></span>
+                <a href="./logout.php" style="color: #d9534f;">Logout</a>
+            <?php else: ?>
+                <a href="./login.php">Login</a>
+            <?php endif; ?>
         </div>
     </nav>
 

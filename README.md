@@ -8,7 +8,7 @@
 - [x] make basic homepage
 - [x] make basic login page
 - [x] make login database and system
-- [ ] make login system persistant and cross-page
+- [X] make login system persistant and cross-page
 - [ ] add sighn up
 - [ ] make site closer in style to figma
 
