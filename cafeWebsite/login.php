@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// If already logged in, skip the login page and go straight to about.php
+// If already logged in, skip the login page and go straight to index.php
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
     header("Location: ./index.php");
     exit();
@@ -33,7 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        
+
+        // TEMPORARY DEBUG: Check what's happening
+        // echo "Input: $input_pass | DB: " . $row['password']; exit;
+
         // Recommended: Use password_verify() if passwords are hashed. 
         // Using plain text comparison ($input_pass === $row['password']) only if stored as plain text:
         if ($input_pass === $row['password']) {
@@ -96,8 +99,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="password" id="name2" name="password" required>
                     </div>
 
-                    <div style="margin-top: 15px;">
+                    <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; align-items: center;">
                         <input type="submit" value="Log In">
+                        <a href="./sighnup.php" class="signup-btn-link" style="text-decoration: none;">
+                            <button type="button">Sign Up</button>
+                        </a>
                     </div>
                 </form>
             </div>
