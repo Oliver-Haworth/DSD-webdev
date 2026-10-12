@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +25,13 @@
             <a href="./menu.php">Menu</a>
             <a href="./about.php">About</a>
             <a href="./contact.php">Contact</a>
+            
+            <?php if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true): ?>
+                <span style="color: #666; font-size: 0.9rem; margin-right: 5px;">Hi, <?php echo htmlspecialchars($_SESSION["username"]); ?></span>
+                <a href="./logout.php" style="color: #d9534f;">Logout</a>
+            <?php else: ?>
+                <a href="./login.php">Login</a>
+            <?php endif; ?>
         </div>
     </nav>
 
@@ -43,7 +55,7 @@
             </div>
 
             <div class="coffee-stamp">
-                <img src=./assets/independent.png alt="independantly owned" hight="200" width=>
+                <img src="./assets/independent.png" alt="independantly owned" height="200">
             </div>
 
         </section>

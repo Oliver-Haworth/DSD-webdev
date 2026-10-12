@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // If already logged in, skip the login page and go straight to about.php
 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true) {
-    header("Location: about.php");
+    header("Location: ./index.php");
     exit();
 }
 
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["user_id"] = $row['id'];
             $_SESSION["username"] = $row['username'];
 
-            header("Location: about.php");
+            header("Location: ./index.php");
             exit();
         } else {
             $error_message = "Invalid username or password. Please try again.";
