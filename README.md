@@ -15,6 +15,7 @@
 ## things i would have done if had more time/what i didn't get round to and plan to implement on the next project
 
 - [ ] connect menu to a database
+- [ ] de ai ify
 - [ ] forgot password button
 - [ ] basket/shopping cart
 - [ ] orderable menu (add items to cart)
