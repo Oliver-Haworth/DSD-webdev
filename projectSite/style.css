@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #050000;
+    color: #f8f8f8;
+    margin: 10;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    color: #ff0000;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    color: unset;
+
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.center-borat {
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    margin: 1rem auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+}
+
+article {
+    background: #441313;
+    border: 2px dashed aqua;
+    border-radius: 10px;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "img h3"
+        "p   p";
+
+    align-items: center;
+    gap: 0.5rem 1rem;
+}
+
+article img {
+    grid-area: img;
+}
+
+article h3 {
+    grid-area: h3;
+    margin: 0;
+}
+
+article p {
+    grid-area: p;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+#changeBtn {
+    display: block;
+    margin: 1rem auto;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+
+    .center-borat {
+        width: 80%;
+    }
+
+    nav {
+        /* Still stays on one line */
+        flex-wrap: nowrap;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
