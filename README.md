@@ -17,7 +17,7 @@
 - [ ] connect menu to a database
 - [ ] de ai ify
 - [ ] forgot password button
-- [ ] basket/shopping cart
+- [x] basket/shopping cart
 - [ ] orderable menu (add items to cart)
 - [ ] password hashing
 - [ ] a non ai desighn :|
