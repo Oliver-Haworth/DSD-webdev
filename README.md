@@ -10,17 +10,17 @@
 - [x] make login database and system
 - [X] make login system persistant and cross-page
 - [x] add sighn up
-- [ ] make site closer in style to figma - desighn is similar but seprated into multiple pages
+- [ ] ~~make site closer in style to figma - desighn is similar but seprated into multiple pages~~
 
 ## things i would have done if had more time/what i didn't get round to and plan to implement on the next project
 
-- [ ] connect menu to a database
-- [ ] de ai ify
-- [ ] forgot password button
+- [ ] ~~connect menu to a database~~
+- [ ] ~~de ai ify~~
+- [ ] ~~forgot password button~~
 - [x] basket/shopping cart
-- [ ] orderable menu (add items to cart)
+- [x] orderable menu (add items to cart)
 - [ ] password hashing
-- [ ] a non ai desighn :|
-- [ ] better file management
-- [ ] modularisation for html and css (re-useable modules such as footer)
-- [ ] not have to re-write from scratch so many times
+- [ ] ~~a non ai desighn :|~~
+- [ ] ~~better file management~~
+- [ ] ~~modularisation for html and css (re-useable modules such as footer)~~
+- [ ] ~~not have to re-write from scratch so many times (save more next time)~~
