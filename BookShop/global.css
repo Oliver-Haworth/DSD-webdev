@@ -1,0 +1,107 @@
+:root {
+    --accent: rgba(227, 118, 23, 1);
+    --border: #333;
+}
+
+body {
+  margin: 0;
+}
+
+/* =====================================
+saleBar
+===================================== */
+.saleBar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(234, 220, 204, 1);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  max-height: 30px;
+}
+
+/* =====================================
+navbar
+===================================== */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 24px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.4;
+    min-height: 50px;
+}
+
+.navBarContent {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 30px;
+}
+
+.navBarLink {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom: 3px solid var(--accent);
+    line-height: 1;
+}
+
+.navBarLogo {
+    cursor: pointer;
+    width: auto;
+    height: 50px;
+}
+
+.searchIcon {
+    cursor: pointer;
+    width: auto;
+    height: 30px;
+}
+
+/* =====================================
+hero
+===================================== */
+.hero {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif; 
+  margin: 0;
+  line-height: 1.2;
+}
+
+.titleBlack {
+  color: #000000;
+  font-weight: 900;
+  font-size: 3rem; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.titlePink {
+  color: var(--accent); 
+  font-weight: 700;
+  font-size: 2.5rem; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
