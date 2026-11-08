@@ -105,3 +105,36 @@ hero
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+/* =====================================
+showcase
+===================================== */
+.showcaseTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =====================================
+item
+===================================== */
+.item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #333;
+  padding-bottom: 8px;
+}
+
+.item img {
+  width: 300px;
+  height: auto;
+}
+
+.showcaseGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}

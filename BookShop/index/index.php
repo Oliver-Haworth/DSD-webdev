@@ -47,6 +47,47 @@
             </h1>
           </div>
         </section>
-    </main>
+
+        <h2 class="showcaseTitle">BLOGS AND BOOK REVIEWS</h2>
+
+        <div class="showcaseGrid">
+          
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            Book collecting in 2026
+          </div>
+
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            Best books of 2026
+          </div>
+
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            A guide to pretending to read
+          </div>
+
+        </div>
+
+        <h2 class="showcaseTitle">TOP SELLERS OF THE MONTH</h2>
+        <div class="showcaseGrid">
+          
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            Book
+          </div>
+
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            Book
+          </div>
+
+          <div class="item">
+            <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
+            Book
+          </div>
+
+        </div>
+  </main>
   </body>
 </html>
