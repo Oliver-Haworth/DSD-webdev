@@ -14,24 +14,24 @@
     </div>
 
 <!-- =================== navBart ==========================-->
-    <div class=navBar>
+    <div class="navBar">
 
       <!-- left content  -->
-      <div class=navBarContent>
-
-        <img class=navBarLogo src=".././assets/Logo.png" alt="BookBok BookShop logo a realistic drawn chicken holding a drawn artstyle book" href=".././index.php">  
-        <div class=navBarLink href=".././about.php">ABOUT</div>
-        <div class=navBarLink href=".././books.php">BOOKS</div>
-        <div class=navBarLink href=".././contact.php">CONTACT</div>
-
+      <div class="navBarContent">
+        <a href=".././index.php">
+          <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok BookShop logo">  
+        </a>
+        
+        <a class="navBarLink" href=".././about/about.php">ABOUT</a>
+        <a class="navBarLink" href=".././books.php">BOOKS</a>
+        <a class="navBarLink" href=".././contact.php">CONTACT</a>
       </div>
 
-      <div class=navBarContent>
+      <div class="navBarContent">
 
         <!-- right content -->
-        <img class="searchIcon" src=".././assets/searchIcon.png" alt="magnifying glass icon as a search button">
-        <div class=navBarLink href=".././basket.php">BASKET</div>
-
+        <img class="searchIcon" src=".././assets/searchIcon.png" alt="magnifying glass icon">
+        <a class="navBarLink" href=".././basket.php">BASKET</a>
       </div>
     </div>
 
@@ -54,17 +54,17 @@
           
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            Book collecting in 2026
+            <a>Book collecting in 2026</a>
           </div>
 
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            Best books of 2026
+            <a>Best books of 2026</a>
           </div>
 
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            A guide to pretending to read
+            <a>A guide to pretending to read</a>
           </div>
 
         </div>
@@ -74,17 +74,17 @@
           
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            Book
+            <a href=".././basket.php">Book</a>
           </div>
 
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            Book
+            <a href=".././basket.php">Book</a>
           </div>
 
           <div class="item">
             <img class="navBarLogo" src=".././assets/Logo.png" alt="BookBok logo">  
-            Book
+            <a href=".././basket.php">Book</a>
           </div>
 
         </div>
