@@ -211,7 +211,7 @@ img {
 
 .item img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   flex-shrink: 0;
   object-fit: cover;
   object-position: center;

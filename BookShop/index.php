@@ -46,8 +46,8 @@
         
         <div class="showcaseGrid">
           <div class="item">
-            <img class="navBarLogo" src="assets/Logo.png" alt="BookBok logo">  
-            <a href="basket.php">Book</a>
+            <img class="navBarLogo" src="assets/JD1.png" alt="BookBok logo">  
+            <a href="basket.php">Is It Too Late to Make a Run for It?</a>
           </div>
 
           <div class="item">
@@ -60,6 +60,8 @@
             <a href="basket.php">Book</a>
           </div>
         </div>
+
+        <button>test</button>
   </main>
   </body>
 </html>
