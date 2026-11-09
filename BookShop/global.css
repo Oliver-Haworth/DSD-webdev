@@ -111,9 +111,22 @@ hero
 showcase
 ===================================== */
 .showcaseTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: center;
+}
+
+.showcaseTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 12px auto 0 auto;
 }
 
 /* =====================================
@@ -146,4 +159,39 @@ item
   justify-content: center;
   gap: 30px;
   padding: 20px;
+}
+
+/* =====================================
+About Section
+===================================== */
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px;
+  background-color: #fafafa;
+}
+
+.aboutText {
+  max-width: 750px;
+  width: 100%;
+}
+
+.aboutText p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.aboutText p:first-of-type::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: var(--accent);
+  font-weight: 900;
+  float: left;
+  line-height: 0.8;
+  margin-right: 12px;
+  margin-top: 6px;
 }
