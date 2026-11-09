@@ -1,72 +1,125 @@
 :root {
-    --accent: rgba(227, 118, 23, 1);
-    --border: #333;
+  /* Colors */
+  --accent: #e37617;
+  --accent-hover: #b85d0f;
+  --bg-sale: #eadccc;
+  --bg-light: #fafafa;
+  --text-main: #000000;
+  --text-muted: #333333;
+  --border: #333333;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+
+  /* Transitions */
+  --transition: 0.2s ease-in-out;
+}
+
+/* =====================================
+   Global Reset & Base Styles
+===================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* =====================================
-saleBar
+   Sale Bar
 ===================================== */
 .saleBar {
   display: flex;
   justify-content: center;
-  background-color: rgba(234, 220, 204, 1);
-  padding: 8px 0;
+  align-items: center;
+  background-color: var(--bg-sale);
+  padding: 8px 16px;
   border-bottom: 1px solid var(--border);
-  font-size: 14px;
-  max-height: 30px;
+  font-size: 0.875rem;
+  min-height: 36px;
+  text-align: center;
 }
 
 /* =====================================
-navbar
+   Navbar
 ===================================== */
 .navBar {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 24px;
-    border-bottom: 1px solid var(--border);
-    line-height: 1.4;
-    min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.4;
+  min-height: 66px;
 }
 
 .navBarContent {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    min-height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-.navBarLink {
-    cursor: pointer;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 900;
-    border-bottom: 3px solid var(--accent);
-    line-height: 1;
+.navBarLink,
+.item a {
+  cursor: pointer;
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent);
+  line-height: 1.2;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.navBarLink:hover,
+.item a:hover,
+.navBarLink:focus-visible,
+.item a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--text-main);
 }
 
 .navBarLogo {
-    cursor: pointer;
-    width: auto;
-    height: 50px;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
 }
 
 .searchIcon {
-    cursor: pointer;
-    width: auto;
-    height: 30px;
+  cursor: pointer;
+  width: auto;
+  height: 30px;
+  transition: transform var(--transition);
+}
+
+.searchIcon:hover {
+  transform: scale(1.1);
 }
 
 /* =====================================
-hero
+   Hero
 ===================================== */
 .hero {
   position: relative;
-  height: 180px;
+   isolation: isolate;
+  min-height: 240px;
   width: 100%;
+  padding: 32px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,46 +130,45 @@ hero
 
 .heroImage {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; 
+  z-index: -1;
 }
 
 .heroTitle {
-  font-family: 'Playfair Display', serif; 
+  font-family: var(--font-serif);
   margin: 0;
   line-height: 1.2;
 }
 
 .titleBlack {
-  color: #000000;
+  color: var(--text-main);
   font-weight: 900;
-  font-size: 3rem; 
+  font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.titlePink {
-  color: var(--accent); 
+.titlePink,
+.titleAccent {
+  color: var(--accent);
   font-weight: 700;
-  font-size: 2.5rem; 
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 /* =====================================
-showcase
+   Showcase & Item Grid
 ===================================== */
 .showcaseTitle {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.2rem);
   letter-spacing: 2px;
-  margin-top: 0;
-  margin-bottom: 40px;
-  color: #000;
+  margin: 40px 0;
+  color: var(--text-main);
   text-align: center;
 }
 
@@ -126,50 +178,55 @@ showcase
   width: 60px;
   height: 4px;
   background-color: var(--accent);
-  margin: 12px auto 0 auto;
-}
-
-/* =====================================
-item
-===================================== */
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid var(--border);
-  padding-bottom: 8px;
-}
-
-.item img {
-  width: 300px;
-  height: auto;
-}
-
-.item a {
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 900;
-  border-bottom: 3px solid var(--accent);
-  line-height: 1;
-  color: #000000;
+  margin: 12px auto 0;
 }
 
 .showcaseGrid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid var(--border);
+  padding-bottom: 16px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #ffffff;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid var(--border);
 }
 
 /* =====================================
-About Section
+   About Section
 ===================================== */
 .aboutSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 24px;
-  background-color: #fafafa;
+  background-color: var(--bg-light);
 }
 
 .aboutText {
@@ -178,15 +235,15 @@ About Section
 }
 
 .aboutText p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.8;
-  color: #333;
+  color: var(--text-muted);
+  margin-top: 0;
   margin-bottom: 24px;
 }
 
 .aboutText p:first-of-type::first-letter {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-serif);
   font-size: 3.5rem;
   color: var(--accent);
   font-weight: 900;
