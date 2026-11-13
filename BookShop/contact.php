@@ -27,6 +27,7 @@
           <div>
             <p>email: GFYS@gmail.com</p>
             <p>phont: 666 666 666</p>
+            <p>location: 10 downing street london</p>
           </div>
         </section>
   </main>

@@ -1,3 +1,19 @@
+<?php
+$host = '127.0.0.1';
+$dbname = 'bookshop';
+$user = 'root';
+$pass = ''; 
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $stmt = $pdo->query("SELECT * FROM books");
+    $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch(PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,21 +41,25 @@
 
         <h2 class="showcaseTitle">TOP SELLERS OF THE MONTH</h2>
         
+        <!-- =================== Dynamic Book Grid ==========================-->
         <div class="showcaseGrid">
-          <div class="item">
-            <img class="navBarLogo" src="assets/Logo.png" alt="BookBok logo">  
-            <a href="basket.php">Book</a>
-          </div>
+          
+          <?php if (count($books) > 0): ?>
+              <?php foreach ($books as $book): ?>
+                  <div class="item">
+                    <img class="navBarLogo" src="<?= htmlspecialchars($book['imgAdress']) ?>.png" alt="<?= htmlspecialchars($book['title']) ?>">  
+                    
+                    <h4><?= htmlspecialchars($book['title']) ?></h4>
+                    <p><?= htmlspecialchars($book['athour']) ?></p>
+                    <p>£<?= htmlspecialchars($book['price']) ?></p>
+                    
+                    <a href="basket.php?id=<?= urlencode($book['id']) ?>">Add to Basket</a>
+                  </div>
+              <?php endforeach; ?>
+          <?php else: ?>
+              <p>No books currently available.</p>
+          <?php endif; ?>
 
-          <div class="item">
-            <img class="navBarLogo" src="assets/Logo.png" alt="BookBok logo">  
-            <a href="basket.php">Book</a>
-          </div>
-
-          <div class="item">
-            <img class="navBarLogo" src="assets/Logo.png" alt="BookBok logo">  
-            <a href="basket.php">Book</a>
-          </div>
         </div>
   </main>
   </body>
