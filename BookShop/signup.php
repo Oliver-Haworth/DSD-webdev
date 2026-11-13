@@ -61,8 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <body>
     <?php include 'header.php'; ?>
     <main>
-      
-      <h2>Create an Account</h2>
 
       <?php if ($error): ?>
           <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>

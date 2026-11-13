@@ -1,8 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>BookBok BookShop</title>
+    <title>BookBok BookShop - Basket</title>
     <link rel="stylesheet" href="global.css">
     <link data-n-head="ssr" rel="icon" type="image/png" href="/assets/Logo.png">
   </head>
@@ -11,6 +19,9 @@
     <?php include 'header.php'; ?>
     
     <main>
+        <div class="user-greeting" style="text-align: right; margin-bottom: 20px;">
+            Logged in as: <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong>
+        </div>
 
         <h2 class="showcaseTitle">BASKET</h2>
 

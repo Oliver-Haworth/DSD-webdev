@@ -10,9 +10,8 @@
   --transition: 0.2s ease-in-out;
 
   /* Fonts */
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
-
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* =====================================
@@ -82,7 +81,9 @@ img {
   text-decoration: none;
   border-bottom: 3px solid var(--accent);
   line-height: 1.2;
-  transition: color var(--transition), border-color var(--transition);
+  transition:
+    color var(--transition),
+    border-color var(--transition);
 }
 
 .navBarLink:hover,
@@ -200,7 +201,9 @@ img {
   width: 100%;
   max-width: 300px;
   background-color: #ffffff;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .item:hover {
@@ -259,4 +262,66 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+/* =====================================
+   Account & Form Styles
+===================================== */
+
+/* Nav greeting for logged-in users */
+.navUserGreeting {
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* Form Container */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 40px auto; /* Centers the form on the page */
+  padding: 30px;
+  gap: 15px; /* Adds space between inputs */
+  background-color: var(--bg-light);
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contactForm label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.contactForm input {
+  padding: 12px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.contactForm input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.contactForm button {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: var(--text-main);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color var(--transition);
+}
+
+.contactForm button:hover {
+  background-color: var(--accent);
 }
