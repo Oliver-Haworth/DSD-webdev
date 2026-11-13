@@ -7,13 +7,12 @@
   --text-main: #000000;
   --text-muted: #333333;
   --border: #333333;
+  --transition: 0.2s ease-in-out;
 
-  /* Typography */
+  /* Fonts */
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Helvetica Neue', Arial, sans-serif;
 
-  /* Transitions */
-  --transition: 0.2s ease-in-out;
 }
 
 /* =====================================
@@ -116,7 +115,7 @@ img {
 ===================================== */
 .hero {
   position: relative;
-   isolation: isolate;
+  isolation: isolate;
   min-height: 240px;
   width: 100%;
   padding: 32px 20px;
@@ -251,4 +250,13 @@ img {
   line-height: 0.8;
   margin-right: 12px;
   margin-top: 6px;
+}
+
+/* =====================================
+   Login Section
+===================================== */
+.contactForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
